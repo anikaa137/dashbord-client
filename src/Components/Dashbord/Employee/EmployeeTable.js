@@ -8,7 +8,7 @@ const EmployeeTable = () => {
     const [render, setRender] = useState(1); /// delete state
 
   useEffect(() => {
-    fetch('http://localhost:5000/employees')
+    fetch('https://pacific-coast-29479.herokuapp.com/employees')
       .then(res => res.json())
     .then(data=> setEmployees(data))
   },[render])
@@ -20,7 +20,7 @@ const EmployeeTable = () => {
 
     function deleteEmployee(id) {
         console.log(id);
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://pacific-coast-29479.herokuapp.com/delete/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -37,7 +37,7 @@ const EmployeeTable = () => {
 
     function openModal(id) {
         console.log(id)
-        fetch(`http://localhost:5000/employee/${id}`)
+        fetch(`https://pacific-coast-29479.herokuapp.com/employee/${id}`)
         .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -37,7 +37,7 @@ const UpdatingForm = ({ modalIsOpen, closeModal, loadData, render, setRender }) 
         closeModal()
         console.log(eventData);
 
-        fetch(`http://localhost:5000/updateEmployee/${id}`, {
+        fetch(`https://pacific-coast-29479.herokuapp.com/updateEmployee/${id}`, {
             method: "PATCH",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(eventData),
@@ -62,7 +62,7 @@ const UpdatingForm = ({ modalIsOpen, closeModal, loadData, render, setRender }) 
         >
 
           <h2>Updating</h2>
-           
+
           <form onSubmit={handleSubmit(onSubmit)} class="shadow-lg p-3 mb-5 bg-body rounded">
                             <div className="form-group">
                                 <input

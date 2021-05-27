@@ -23,7 +23,7 @@ const AddEployee = () => {
         };
         console.log(eventData);
 
-        fetch("http://localhost:5000/createEmployee", {
+        fetch("https://pacific-coast-29479.herokuapp.com/createEmployee", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(eventData),
